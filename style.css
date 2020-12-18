@@ -46,6 +46,7 @@ body {
 
 .filter-selector {
   margin: 16px;
+  text-align: center;
 }
 
 .filter-btn {
