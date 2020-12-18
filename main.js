@@ -162,11 +162,16 @@ const captureBtn = document.querySelector(".capture-btn");
 const captureImg = document.querySelector(".capture-img");
 const captureMeta = document.querySelector(".capture-meta");
 const arCanvas = document.querySelector(".ar-canvas");
+const shareFb = document.querySelector(".share-fb");
 
 captureBtn.addEventListener("click", (event) => {
   event.preventDefault();
   let pngUrl = arCanvas.toDataURL(); // png in dataURL format
-  captureImg.src = pngUrl;
-  captureMeta.content = pngUrl;
-  console.log(pngUrl);
+  const downloadLink = document.createElement("A");
+  downloadLink.innerText = "Download";
+  downloadLink.href = pngUrl;
+  downloadLink.download = "lewagon-xmas.png";
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+  downloadLink.remove();
 })
