@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-language" content="en-EN" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Le Wagon glasses</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- INCLUDE JEELIZ FACEFILTER SCRIPT -->
+    <script src="./lib/jeelizFaceFilter.js"></script>
+
+    <!-- INCLUDE THREE.JS -->
+    <script src="./lib/three.min.js"></script>
+
+    <!-- INCLUDE JEELIZRESIZER -->
+    <script src="./lib/jeelizResizer.js"></script>
+
+    <!-- INCLUDE JEELIZ THREE.JS HELPER -->
+    <script src="./lib/jeelizThreeHelper.js"></script>
+
+    <!-- INCLUDE THREEJS LIBS AND GEOMETRY SCRIPTS -->
+    <script src="https://rawcdn.githack.com/mrdoob/three.js/r106/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="./three-circle.js"></script>
+    <script src="./three-gltf.js"></script>
+    <script src="./three-plane.js"></script>
+
+    <!-- INCLUDE DEMO SCRIPT -->
+    <script src="./main.js"></script>
+  </head>
+
+  <body onload="main()">
+    <div class="container">
+      <div class="title">
+        <img src="images/logo.png" alt="">
+        <h1>Put on your glasses, celebrate Xmas with Le Wagon 🎅</h1>
+      </div>
+      <div class="filter-selector">
+        <a class="filter-btn filter-hat" href="#">Try the Xmas hat 🤶</a>
+        <a class="filter-btn filter-beard" href="#">Try Santa's beard 🎄</a>
+      </div>
+      <canvas class="ar-canvas" id='jeeFaceFilterCanvas'>
+      </canvas>
+      <p class="footer">
+        More AR and other projects on
+        <a href="https://www.yannklein.me">
+          Yann Klein's portfolio
+        </a>
+      </p>
+    </div>
+  </body>
+</html>
+
