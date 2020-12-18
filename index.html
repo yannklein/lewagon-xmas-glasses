@@ -4,7 +4,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="content-language" content="en-EN" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Le Wagon glasses</title>
+
+    <meta property="og:url" content="https://yannklein.github.io/lewagon-xmas-glasses/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Le Wagon Tokyo - Xmas glasses" />
+    <meta property="og:description" content="Put on your glasses, celebrate Xmas with Le Wagon 🎅" />
+    <meta class="capture-meta" property="og:image" content="images/logo.png" />
+
+    <title>Le Wagon Tokyo - Xmas glasses</title>
     <link rel="stylesheet" href="style.css">
 
     <!-- INCLUDE JEELIZ FACEFILTER SCRIPT -->
@@ -21,12 +28,17 @@
 
     <!-- INCLUDE THREEJS LIBS AND GEOMETRY SCRIPTS -->
     <script src="https://rawcdn.githack.com/mrdoob/three.js/r106/examples/js/loaders/GLTFLoader.js"></script>
-    <script src="./three-circle.js"></script>
-    <script src="./three-gltf.js"></script>
-    <script src="./three-plane.js"></script>
 
-    <!-- INCLUDE DEMO SCRIPT -->
-    <script src="./main.js"></script>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
   </head>
 
   <body onload="main()">
@@ -41,6 +53,12 @@
       </div>
       <canvas class="ar-canvas" id='jeeFaceFilterCanvas'>
       </canvas>
+      <a href="#" class="capture-btn">Take a picture</a>
+      <div class="fb-share-button"
+      data-href="https://yannklein.github.io/lewagon-xmas-glasses/"
+      data-layout="button_count">
+      </div>
+      <img class="capture-img" src="" alt="">
       <p class="footer">
         More AR and other projects on
         <a href="https://www.yannklein.me">
@@ -48,6 +66,10 @@
         </a>
       </p>
     </div>
+    <script src="./main.js"></script>
+    <script src="./three-circle.js"></script>
+    <script src="./three-gltf.js"></script>
+    <script src="./three-plane.js"></script>
   </body>
 </html>
 

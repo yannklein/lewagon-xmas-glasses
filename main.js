@@ -157,3 +157,16 @@ function init_faceFilter(videoSettings){
     }
   }); //end JEEFACEFILTERAPI.init call
 }
+
+const captureBtn = document.querySelector(".capture-btn");
+const captureImg = document.querySelector(".capture-img");
+const captureMeta = document.querySelector(".capture-meta");
+const arCanvas = document.querySelector(".ar-canvas");
+
+captureBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  let pngUrl = arCanvas.toDataURL(); // png in dataURL format
+  captureImg.src = pngUrl;
+  captureMeta.content = pngUrl;
+  console.log(pngUrl);
+})
