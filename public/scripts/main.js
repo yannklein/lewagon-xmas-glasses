@@ -139,7 +139,7 @@ function init_faceFilter(videoSettings){
   JEEFACEFILTERAPI.init({
     followZRot: true,
     canvasId: 'jeeFaceFilterCanvas',
-    NNCPath: './lib/neuralNets/', // root of NN_DEFAULT.json file
+    NNCPath: './scripts/lib/neuralNets/', // root of NN_DEFAULT.json file
     maxFacesDetected: 1,
     callbackReady: function(errCode, spec){
       if (errCode){
