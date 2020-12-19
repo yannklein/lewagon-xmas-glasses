@@ -44,6 +44,13 @@ body {
   width: 64px;
 }
 
+.title-link {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
 .footer {
   margin: 32px;
 }
