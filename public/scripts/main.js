@@ -92,10 +92,10 @@ function init_threeScene(spec) {
   // invisiblePlane.frustumCulled = false;
   // threeStuffs.faceObject.add(invisiblePlane);
 
-  const hatFliter = document.querySelector(".filter-hat");
-  const beardFliter = document.querySelector(".filter-beard");
+  const hatFilter = document.querySelector(".filter-hat");
+  const beardFilter = document.querySelector(".filter-beard");
 
-  hatFliter.addEventListener("click", (event) => {
+  hatFilter.addEventListener("click", (event) => {
     const beardObject = threeStuffs.faceObject.getObjectByName("beard");
     event.preventDefault();
     loader.load(
@@ -105,10 +105,12 @@ function init_threeScene(spec) {
         beardObject.position.x = 0;
         beardObject.position.y = 0.9;
         beardObject.position.z = 0.4;
+        hatFilter.classList.add("active");
+        beardFilter.classList.remove("active");
       })
   });
 
-  beardFliter.addEventListener("click", (event) => {
+  beardFilter.addEventListener("click", (event) => {
     event.preventDefault();
     const beardObject = threeStuffs.faceObject.getObjectByName("beard");
     loader.load(
@@ -119,6 +121,8 @@ function init_threeScene(spec) {
         beardObject.position.x = -0.05;
         beardObject.position.y = -0.55;
         beardObject.position.z = 0.5;
+        hatFilter.classList.remove("active");
+        beardFilter.classList.add("active");
       })
   });
   //CREATE THE CAMERA

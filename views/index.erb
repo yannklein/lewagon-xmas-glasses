@@ -34,14 +34,16 @@
     <div class="container">
       <div class="title">
         <img src="/images/logo.png" alt="">
-        <h1>Put on your glasses, celebrate Xmas with Le Wagon 🎅</h1>
+        <h1>Put on your glasses, celebrate Xmas with Le Wagon 🎄</h1>
       </div>
-      <div class="filter-selector">
-        <a class="filter-btn filter-hat" href="#">Xmas hat 🤶</a>
-        <a class="filter-btn filter-beard" href="#">Santa's beard 🎄</a>
+      <div class="ar-canvas-container">
+        <canvas class="ar-canvas" id='jeeFaceFilterCanvas'>
+        </canvas>
+        <div class="filter-selector">
+          <a class="filter-btn filter-hat active" href="#">🎩</a>
+          <a class="filter-btn filter-beard" href="#">🧔</a>
+        </div>
       </div>
-      <canvas class="ar-canvas" id='jeeFaceFilterCanvas'>
-      </canvas>
       <a href="#" class="capture-btn">📸</a>
       <form class="selfieForm" action="/selfie" method="post">
         <input class="selfieImg" type="text" name="image">
