@@ -31,22 +31,22 @@ function init_threeScene(spec) {
           map: texture,
           side: THREE.DoubleSide
         },
-        position: { x: -0.32, y: 0.21, z: 0.5 },
-        radius: 0.2
+        position: { x: -0.02, y: 0.10, z: 0.65 },
+        radius: 0.1
       });
       leftGlass.frustumCulled = false;
       threeStuffs.faceObject.add(leftGlass);
 
-      const rightGlass = createCircle({
-        matParams: {
-          map: texture,
-          side: THREE.DoubleSide
-        },
-        position: { x: 0.34, y: 0.21, z: 0.5 },
-        radius: 0.2
-      });
-      rightGlass.frustumCulled = false;
-      threeStuffs.faceObject.add(rightGlass);
+      // const rightGlass = createCircle({
+      //   matParams: {
+      //     map: texture,
+      //     side: THREE.DoubleSide
+      //   },
+      //   position: { x: 0.34, y: 0.21, z: 0.5 },
+      //   radius: 0.2
+      // });
+      // rightGlass.frustumCulled = false;
+      // threeStuffs.faceObject.add(rightGlass);
     },
     //onProgress
     undefined,
@@ -81,7 +81,7 @@ function init_threeScene(spec) {
     }
   );
 
-  createGltf(threeStuffs, 0.13);
+  // createGltf(threeStuffs, 0.13);
 
   // const invisiblePlane = createPlane({
   //   matParams: {colorWrite: false},
@@ -118,7 +118,7 @@ function init_threeScene(spec) {
         beardObject.material.map = texture;
         beardObject.position.x = -0.05;
         beardObject.position.y = -0.55;
-        beardObject.position.z = 0.4;
+        beardObject.position.z = 0.5;
       })
   });
   //CREATE THE CAMERA
@@ -163,15 +163,12 @@ const captureImg = document.querySelector(".capture-img");
 const captureMeta = document.querySelector(".capture-meta");
 const arCanvas = document.querySelector(".ar-canvas");
 const shareFb = document.querySelector(".share-fb");
+const selfieImg = document.querySelector(".selfieImg");
+const selfieForm = document.querySelector(".selfieForm");
 
 captureBtn.addEventListener("click", (event) => {
   event.preventDefault();
   let pngUrl = arCanvas.toDataURL(); // png in dataURL format
-  const downloadLink = document.createElement("A");
-  downloadLink.innerText = "Download";
-  downloadLink.href = pngUrl;
-  downloadLink.download = "lewagon-xmas.png";
-  document.body.appendChild(downloadLink);
-  downloadLink.click();
-  downloadLink.remove();
+  selfieImg.value = pngUrl;
+  selfieForm.submit();
 })

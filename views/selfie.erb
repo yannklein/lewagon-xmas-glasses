@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-language" content="en-EN" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta property="og:url" content="https://yannklein.github.io/lewagon-xmas-glasses/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Le Wagon Tokyo - Xmas glasses" />
+    <meta property="og:description" content="Put on your glasses, celebrate Xmas with Le Wagon 🎅" />
+    <meta class="capture-meta" property="og:image" content="<%= @image %>" />
+
+    <title>Le Wagon Tokyo - Xmas glasses</title>
+    <link rel="stylesheet" href="/style.css">
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5fdd9809b09ed3001316417d&product=inline-share-buttons" async="async"></script>
+  </head>
+
+  <body onload="main()">
+    <div class="container">
+      <div class="title">
+        <img src="/images/logo.png" alt="">
+        <h1>Put on your glasses, celebrate Xmas with Le Wagon 🎅</h1>
+      </div>
+      <img src="<%= @image %>" alt="Le Wagon Xmas glasses selfie">
+      <p>Share it around you</p>
+      <!-- Your share button code -->
+      <div class="sharethis-inline-share-buttons"></div>
+      <p class="footer">
+        More AR and other projects on
+        <a href="https://www.yannklein.me">
+          Yann Klein's portfolio
+        </a>
+      </p>
+    </div>
+  </body>
+</html>
+

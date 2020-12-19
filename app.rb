@@ -1,11 +1,14 @@
 require 'sinatra'
-require "sinatra/json"
 require 'sinatra/reloader'
-require 'json'
-require 'open-uri'
+require 'sinatra/activerecord'
 require 'date'
 require 'pry'
 
 get '/' do
   erb :index
+end
+
+post '/selfie' do
+  @image = params[:image]
+  erb :selfie
 end

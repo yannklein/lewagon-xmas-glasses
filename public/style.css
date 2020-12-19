@@ -68,6 +68,10 @@ body {
   margin: 8px;
 }
 
+.selfieForm {
+  display: none;
+}
+
 @media (max-width: 750px) {
 
   body {
