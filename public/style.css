@@ -81,6 +81,17 @@ body {
   display: none;
 }
 
+.social-btn {
+  margin-bottom: 8px;
+}
+
+.social-text {
+  font-size: 24px;
+  font-weight: bolder;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
 @media (max-width: 750px) {
 
   body {
