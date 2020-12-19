@@ -11,3 +11,8 @@ post '/selfie' do
   @image = params[:image]
   erb :selfie
 end
+
+get '/selfie' do
+  @image = '/images/sample.png'
+  erb :selfie
+end
