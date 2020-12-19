@@ -102,6 +102,12 @@ body {
   margin-bottom: 8px;
 }
 
+.img-selfie {
+  flex-grow: 1;
+  width: 60vh;
+  object-fit: cover;
+}
+
 @media (max-width: 750px) {
 
   body {
