@@ -173,7 +173,8 @@ const selfieForm = document.querySelector(".selfieForm");
 captureBtn.addEventListener("click", (event) => {
   event.preventDefault();
   captureBtn.innerText = "👍";
-  captureBtn.style.cursor = "default";
+  // captureBtn.style.cursor = "default";
+  captureBtn.disabled = true;
   let pngUrl = arCanvas.toDataURL(); // png in dataURL format
   selfieImg.value = pngUrl;
   const formData = new FormData(selfieForm);
