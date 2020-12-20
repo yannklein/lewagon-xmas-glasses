@@ -133,4 +133,8 @@ body {
   .ar-canvas-container {
     width: 100%;
   }
+
+  .img-selfie {
+    width: 100%;
+  }
 }
