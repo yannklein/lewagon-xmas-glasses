@@ -109,6 +109,14 @@ body {
   object-fit: cover;
 }
 
+.png-attrib {
+  font-size: 6px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  align-items: center;
+}
+
 @media (max-width: 750px) {
 
   body {
